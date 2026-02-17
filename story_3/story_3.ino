@@ -1,39 +1,39 @@
 // C++ code
-const int RED = 12; //Left reverse
-const int GREEN = 11; //Left forward
-const int WHITE = 10; //Left enable
-const int YELLOW = 9; //Right enable
-const int ORANGE = 8; //Right reverse
-const int BLUE = 7; //Right forward
+const int LEFT_REVERSE = 12; //Red LED
+const int LEFT_FORWARD = 11; //Green LED
+const int LEFT_ENABLE = 10; //White LED
+const int RIGHT_ENABLE = 9; //Yellow LED
+const int RIGHT_REVERSE = 8; //Orange LED
+const int RIGHT_FORWARD = 7; //Blue LED
 void setup()
 {
-  pinMode(RED, OUTPUT);
-  pinMode(GREEN, OUTPUT);
-  pinMode(WHITE, OUTPUT);
-  pinMode(YELLOW, OUTPUT);
-  pinMode(ORANGE, OUTPUT);
-  pinMode(BLUE, OUTPUT);
+  pinMode(LEFT_REVERSE, OUTPUT);
+  pinMode(LEFT_FORWARD, OUTPUT);
+  pinMode(LEFT_ENABLE, OUTPUT);
+  pinMode(RIGHT_ENABLE, OUTPUT);
+  pinMode(RIGHT_REVERSE, OUTPUT);
+  pinMode(RIGHT_FORWARD, OUTPUT);
 }
 
 void loop()
 {
-  digitalWrite(WHITE, HIGH);
-  digitalWrite(YELLOW, HIGH);
-  digitalWrite(GREEN, HIGH);
-  digitalWrite(BLUE, HIGH);
+  digitalWrite(LEFT_ENABLE, HIGH);
+  digitalWrite(RIGHT_ENABLE, HIGH);
+  digitalWrite(LEFT_FORWARD, HIGH);
+  digitalWrite(RIGHT_FORWARD, HIGH);
   delay(5000);
-  digitalWrite(WHITE, LOW);
-  digitalWrite(YELLOW, LOW);
-  digitalWrite(GREEN, LOW);
-  digitalWrite(BLUE, LOW);
+  digitalWrite(LEFT_ENABLE, LOW);
+  digitalWrite(RIGHT_ENABLE, LOW);
+  digitalWrite(LEFT_FORWARD, LOW);
+  digitalWrite(RIGHT_FORWARD, LOW);
   delay(1000);
-  digitalWrite(WHITE, HIGH);
-  digitalWrite(YELLOW, HIGH);
-  digitalWrite(RED, HIGH);
-  digitalWrite(ORANGE, HIGH);
+  digitalWrite(LEFT_ENABLE, HIGH);
+  digitalWrite(RIGHT_ENABLE, HIGH);
+  digitalWrite(LEFT_REVERSE, HIGH);
+  digitalWrite(RIGHT_REVERSE, HIGH);
   delay(2000);
-  digitalWrite(RED, LOW);
-  digitalWrite(ORANGE, LOW);
-  digitalWrite(WHITE, LOW);
-  digitalWrite(YELLOW, LOW);
+  digitalWrite(LEFT_REVERSE, LOW);
+  digitalWrite(RIGHT_REVERSE, LOW);
+  digitalWrite(LEFT_ENABLE, LOW);
+  digitalWrite(RIGHT_ENABLE, LOW);
 }
